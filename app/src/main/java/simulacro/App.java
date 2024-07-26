@@ -5,9 +5,7 @@ package simulacro;
 
 public class App {
     public static void main(String[] args) {
-
     }
-
 
     /*
      * 1. Diseña el algoritmo y programa la función Convertir_min_sec que recibe un número entero en minutos 
@@ -15,7 +13,18 @@ public class App {
      *  Adaptado de edabit
      */
     
+    public static int Convertir_min_sec (int minutos){
 
+        try {
+            int total_seg = 0;
+            final byte segxmin=60;
+            total_seg = minutos * segxmin;      
+            return total_seg;      
+            }
+        catch (Exception e) {
+                return -1;
+            }
+    }
 
      /*
      * 2. Diseña el algoritmo y programa la función Validar_iguales que recibe dos números shorts 
@@ -23,7 +32,17 @@ public class App {
      *  Adaptado de edabit
      */
 
-
+    public static boolean Validar_iguales (short nr1, short nr2){
+        try {
+            boolean son_iguales = false ;
+            if(nr1 == nr2)
+                son_iguales= true;
+            return son_iguales;
+        } 
+        catch (Exception e) {
+            return false;
+        }
+    }
 
     /*
      * 3. Diseña el algoritmo y programa la función Calcular_potencia que recibe en un short el voltaje y en 
@@ -32,6 +51,15 @@ public class App {
      *  Adaptado de edabit
      */
 
+    public static float Calcular_potencia (short voltaje, byte corriente){
+       try {
+            float potencia = 0;
+            potencia = voltaje*corriente;
+            return potencia;
+       } 
+       catch (Exception e) {
+    return 0; 
+       }
+     }
+    }
 
-
-}
